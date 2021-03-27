@@ -1,8 +1,6 @@
 /* general */
 :root {
   scroll-behavior: smooth;
-  --mainColor: #f64242;
-  --subColor: #888;
 }
 
 * {
@@ -100,7 +98,6 @@ aside {
   -webkit-transform: translate(100%);
   transform: translate(100%);
   z-index: 5;
-
 }
 
 .side-menu .close-button {
@@ -140,6 +137,155 @@ aside>a i {
   margin-bottom: 10px;
   text-decoration: none;
   font-weight: normal;
+}
+
+/* general-sections */
+.first-section, .second-section, .third-section, .fourth-section, .fifth-section {
+  position: relative;
+}
+
+.second-section .container,
+.third-section .container,
+.fourth-section .container,
+.fifth-section .container {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 8em 0;
+}
+
+.first-section .container::before,
+.second-section .container::before,
+.third-section .container::before,
+.fourth-section .container::before,
+.fifth-section .container::before {
+  content: "";
+  background-color: #000;
+  opacity: 0.45;
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.second-section-block,
+.third-section-block,
+.fourth-section-block,
+.fifth-section-block {
+  text-align: center;
+  width: 65%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  padding: 5vw;
+  border-radius: 1vh;
+}
+
+.second-section-block h2,
+.third-section-block h2,
+.fourth-section-block h2,
+.fifth-section-block h2 {
+  color: #fff;
+  font-size: 24px;
+}
+
+.second-section-block span,
+.third-section-block span,
+.fourth-section-block span,
+.fifth-section-block span {
+  color: #888;
+  font-size: 18px;
+}
+
+.second-section-block p,
+.third-section-block p,
+.fourth-section-block p,
+.fifth-section-block p {
+  color: #ddd;
+  margin: 2em 0;
+  font-weight: lighter;
+  line-height: 1.75;
+  font-size: 0.9em;
+}
+
+.second-section a,
+.third-section a,
+.fourth-section a,
+.fifth-section a {
+  display: block;
+  border: 2px solid rgba(100, 100, 100, 0.5);
+  border-radius: 0.5vh;
+  color: #fff;
+  font-size: 16px;
+  width: 10em;
+  margin: auto;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 2.5em;
+}
+
+.second-section a:hover,
+.third-section a:hover,
+.fourth-section a:hover,
+.fifth-section a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s;
+}
+
+/* first section */
+.first-section .container {
+  background-image: url(../images/sailing-vessel-3544039_1280.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20% 0;
+}
+
+.first-section .first-section-header {
+  width: 80%;
+  text-align: center;
+}
+
+.first-section .first-section-header h2 {
+  font-size: 8vw;
+  font-family: 'Lobster', cursive;
+  color: #fff;
+  opacity: 0.7;
+  text-shadow: 1px 1px 1px #888;
+  z-index: 4;
+  position: relative;
+}
+
+/* Second Secton */
+.second-section .container {
+  background-image: url(../images/pexels-tom-fisk-3840447.jpg);
+}
+
+/* third section */
+.third-section .container {
+  background-image: url(../images/pexels-tom-fisk-3063470.jpg);
+}
+
+/* fourth section */
+.fourth-section .container {
+  background-image: url(../images/jamie-morrison-VXom6ACaGR0-unsplash.jpg);
+}
+
+/* fifth section */
+.fifth-section .container {
+  background-image: url(../images/pexels-tom-fisk-2231743.jpg);
 }
 
 /* Footer */
@@ -208,10 +354,10 @@ footer {
   padding: 1em 0;
   width: 12em;
 }
+
 .contact-form button:hover {
   background-color: rgba(255, 255, 255, 0.1);
   transition: background-color 0.5s;
-
 }
 
 ::placeholder {
@@ -260,6 +406,18 @@ footer .social-icons li i {
 }
 
 @media only screen and (max-width: 900px) {
+  .contact-form form .textarea-sec {
+    grid-column: 1/3;
+  }
+
+  .first-section .container {
+    padding: 30% 0;
+  }
+
+  .first-section .first-section-header h2 {
+    font-size: 20vw;
+  }
+
   .contact-form form .name-sec {
     grid-column: 1/3;
   }
@@ -284,6 +442,40 @@ footer .social-icons li i {
 }
 
 @media only screen and (max-width: 600px) {
+  .first-section .container {
+    padding: 70% 0;
+  }
+
+  .first-section .first-section-header h2 {
+    font-size: 20vw;
+  }
+
+  .second-section .container,
+  .third-section .container,
+  .fourth-section .container,
+  .fifth-section .container {
+    padding: 5em 0;
+  }
+
+  .second-section-block,
+  .third-section-block,
+  .fourth-section-block,
+  .fifth-section-block {
+    text-align: center;
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    padding: 0.5em;
+    border-radius: 1vh;
+  }
+
+  .second-section-block p,
+  .third-section-block p,
+  .fourth-section-block p,
+  .fifth-section-block p {
+    font-size: 1em;
+  }
+
   .contact-form form .name-sec {
     grid-column: 1/3;
   }
