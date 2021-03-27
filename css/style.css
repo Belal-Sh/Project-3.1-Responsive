@@ -100,7 +100,6 @@ aside {
   -webkit-transform: translate(100%);
   transform: translate(100%);
   z-index: 5;
-
 }
 
 .side-menu .close-button {
@@ -141,3 +140,63 @@ aside>a i {
   text-decoration: none;
   font-weight: normal;
 }
+
+/* general-sections */
+.first-section, .second-section, .third-section, .fourth-section, .fifth-section {
+  position: relative;
+}
+
+.first-section .container::before,
+.second-section .container::before,
+.third-section .container::before,
+.fourth-section .container::before,
+.fifth-section .container::before {
+  content: "";
+  background-color: #000;
+  opacity: 0.45;
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+
+/* first section */
+.first-section .container {
+  background-image: url(../images/sailing-vessel-3544039_1280.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 20% 0;
+}
+
+.first-section .first-section-header {
+  width: 80%;
+  text-align: center;
+}
+
+.first-section .first-section-header h2 {
+  font-size: 8vw;
+  font-family: 'Lobster', cursive;
+  color: #fff;
+  opacity: 0.7;
+  text-shadow: 1px 1px 1px #888;
+  z-index: 4;
+  position: relative;
+}
+@media only screen and (max-width: 600px) {
+  
+  .first-section .container {
+    padding:70% 0;
+  }
+
+  .first-section .first-section-header h2 {
+    font-size: 20vw;
+  }
