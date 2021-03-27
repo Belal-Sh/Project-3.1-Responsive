@@ -191,3 +191,12 @@ aside>a i {
   z-index: 4;
   position: relative;
 }
+@media only screen and (max-width: 600px) {
+  
+  .first-section .container {
+    padding:70% 0;
+  }
+
+  .first-section .first-section-header h2 {
+    font-size: 20vw;
+  }
