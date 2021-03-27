@@ -1,0 +1,18 @@
+/* general */
+:root {
+  scroll-behavior: smooth;
+  --mainColor: #f64242;
+  --subColor: #888;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+/* Global Colors */
