@@ -15,4 +15,129 @@ body {
   font-family: "Open Sans", Arial, Helvetica, sans-serif;
 }
 
-/* Global Colors */
+/* side menu */
+aside input[type=checkbox],
+aside label {
+  width: 0px;
+  height: 0px;
+  position: fixed;
+  cursor: pointer;
+  top: 1em;
+  right: 1em;
+  z-index: 6;
+}
+
+aside input[type=checkbox] {
+  width: 0px;
+  height: 0px;
+  opacity: 0;
+}
+
+aside label {
+  padding: 1.4em 1.4em;
+  display: flex;
+}
+
+aside .menu-bars {
+  margin-left: auto;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 0.8em 0.9em;
+  border-radius: 50%;
+  display: flex;
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+aside .menu-bars i {
+  color: #fff;
+}
+
+aside label:hover~a {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+aside label:hover~a>i {
+  color: rgba(255, 255, 255, 0.4);
+  transition: color 0.3s;
+}
+
+aside label:hover~div>a>i {
+  color: rgba(255, 255, 255);
+  transition: color 0.3s;
+}
+
+aside .menu-bars i {
+  margin: auto;
+}
+
+aside input[type=checkbox]:checked~div {
+  -webkit-transform: translate(0%);
+  transform: translate(0%);
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+aside {
+  position: fixed;
+  width: 100%;
+  z-index: 50;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 18em;
+  padding: 3.5em 0 0 1.5em;
+  background-color: #f64242;
+  box-shadow: 0px 0px 1.5em 0px rgb(0, 0, 0, 0.2);
+  -webkit-transform: translate(100%);
+  transform: translate(100%);
+  z-index: 5;
+
+}
+
+.side-menu .close-button {
+  color: rgba(255, 255, 255, 0.55);
+  position: absolute;
+  top: 1.2em;
+  right: 1.2em;
+  font-size: 17px;
+  z-index: 10;
+}
+
+aside>a i {
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 17px;
+  z-index: 3;
+}
+
+.main-menu {
+  list-style: none;
+}
+
+.main-menu li {
+  margin-bottom: 0.75em;
+  margin-right: 2em;
+}
+
+.main-menu li:nth-child(2) {
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  ;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 1em 0;
+}
+
+.main-menu li a {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  font-weight: normal;
+}
